@@ -1,0 +1,355 @@
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 40px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   Brand / Logo
+========================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: block;
+
+  width: auto;
+  height: 46px;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  margin: 0 auto;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #172033;
+
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #e32b7a;
+}
+
+
+/* =========================
+   Navbar Buttons
+========================= */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  flex-shrink: 0;
+}
+
+.sign-in {
+  border: none;
+  background: transparent;
+
+  color: #172033;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  padding: 10px 4px;
+}
+
+.sign-in:hover {
+  color: #e32b7a;
+}
+
+
+.sign-up {
+  border: none;
+
+  background: #df2878;
+  
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 11px 22px;
+
+  border-radius: 24px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* .sign-up:hover {
+  background: #c91e68;
+  transform: translateY(-1px);
+} */
+
+.sign-up:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 18px rgba(229, 43, 138, 0.25);
+}
+
+
+/* =========================
+   Hamburger
+========================= */
+
+.hamburger {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  color: #172033;
+
+  padding: 5px;
+}
+
+
+/* =========================
+   Tablet / Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    min-height: 70px;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+
+  /* =========================
+     Hamburger - LEFT
+  ========================= */
+
+  .hamburger {
+    display: block;
+
+    grid-column: 1;
+
+    order: 1;
+
+    justify-self: start;
+  }
+
+
+  /* =========================
+     Brand - CENTER
+  ========================= */
+
+  .brand {
+    grid-column: 2;
+
+    order: 2;
+
+    justify-self: center;
+  }
+
+  .brand-logo {
+    height: 40px;
+  }
+
+
+  /* =========================
+     Navigation Menu
+  ========================= */
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 14px 0;
+  }
+
+
+  /* =========================
+     Buttons - RIGHT
+  ========================= */
+
+  .nav-buttons {
+    grid-column: 3;
+
+    order: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+  }
+
+  .sign-in {
+    font-size: 13px;
+
+    padding: 8px 4px;
+  }
+
+  .sign-up {
+    font-size: 13px;
+
+    padding: 9px 15px;
+
+    border-radius: 22px;
+  }
+}
+
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    padding: 0 12px;
+
+    gap: 8px;
+  }
+
+  .brand-logo {
+    height: 36px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+  }
+
+  .nav-buttons {
+    gap: 4px;
+  }
+
+  .sign-in {
+    font-size: 12px;
+
+    padding: 7px 3px;
+  }
+
+  .sign-up {
+    font-size: 12px;
+
+    padding: 8px 11px;
+  }
+}
+
+
+/* =========================
+   Very Small Mobile
+========================= */
+
+@media (max-width: 380px) {
+
+  .navbar {
+    padding: 0 8px;
+
+    gap: 5px;
+  }
+
+  .brand-logo {
+    height: 33px;
+  }
+
+  .hamburger {
+    font-size: 22px;
+  }
+
+  .sign-in {
+    font-size: 11px;
+
+    padding: 6px 2px;
+  }
+
+  .sign-up {
+    font-size: 11px;
+
+    padding: 7px 9px;
+  }
+}
