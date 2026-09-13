@@ -1,0 +1,391 @@
+/* ========================================
+   TECHNOLOGY CARD
+======================================== */
+
+.technology-card {
+  width: 100%;
+  min-height: 292px;
+
+  padding: 16px 16px 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e9f0;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* ========================================
+   CARD HOVER
+======================================== */
+
+.technology-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d9dfea;
+
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ========================================
+   CARD TOP
+======================================== */
+
+.card-top {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+}
+
+
+/* ========================================
+   TECHNOLOGY ICON
+======================================== */
+
+.technology-icon {
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* ========================================
+   BADGE
+======================================== */
+
+.technology-badge {
+  padding: 7px 11px;
+
+  background: #fce7f3;
+
+  color: #df2878;
+
+  border-radius: 18px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   TECHNOLOGY NAME
+======================================== */
+
+.technology-card h3 {
+  margin: 2px 0 8px;
+
+  text-align: center;
+
+  color: #111827;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.technology-card p {
+  margin: 0;
+
+  min-height: 58px;
+
+  color: #52709a;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   TECHNOLOGY INFORMATION
+======================================== */
+
+.technology-info {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.2fr 0.8fr;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: auto;
+  margin-bottom: 12px;
+
+  color: #52709a;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+}
+
+
+/* ========================================
+   CATEGORY CHIP
+======================================== */
+
+.technology-info span:first-child {
+  justify-self: start;
+
+  padding: 5px 9px;
+
+  background: #f1f5f9;
+
+  border-radius: 14px;
+
+  color: #475569;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   DIFFICULTY
+======================================== */
+
+.technology-info span:nth-child(2) {
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   RATING
+======================================== */
+
+.technology-info span:last-child {
+  text-align: right;
+
+  color: #52709a;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   ADD TO STACK BUTTON
+======================================== */
+
+.technology-card button {
+  width: 100%;
+  height: 35px;
+
+  padding: 0 12px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* ========================================
+   BUTTON HOVER
+======================================== */
+
+.technology-card button:hover {
+  background: #df2878;
+
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   DISABLED / ADDED BUTTON
+======================================== */
+
+.technology-card button:disabled {
+  background: #e5e7eb;
+
+  color: #94a3b8;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+.technology-card button:disabled:hover {
+  background: #e5e7eb;
+
+  transform: none;
+}
+
+
+/* ========================================
+   ADDED BUTTON
+======================================== */
+
+.technology-card .added-button {
+  background: #e5e7eb;
+
+  color: #64748b;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .technology-card {
+    min-height: 290px;
+
+    padding: 15px;
+  }
+
+
+  .technology-card h3 {
+    font-size: 18px;
+  }
+
+
+  .technology-card p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .technology-card {
+    min-height: 280px;
+
+    padding: 16px;
+  }
+
+
+  .technology-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .technology-badge {
+    padding: 7px 10px;
+
+    font-size: 10px;
+  }
+
+
+  .technology-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+  }
+
+
+  .technology-card p {
+    font-size: 12px;
+
+    min-height: 55px;
+  }
+
+
+  .technology-info {
+    font-size: 11px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .technology-card button {
+    height: 36px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+  .technology-card {
+    min-height: 275px;
+
+    padding: 15px;
+  }
+
+
+  .technology-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .technology-card h3 {
+    font-size: 17px;
+  }
+
+
+  .technology-card p {
+    font-size: 11.5px;
+  }
+
+
+  .technology-info {
+    font-size: 10.5px;
+  }
+
+}
