@@ -106,8 +106,8 @@
 .sign-up {
   border: none;
 
-  background: #df2878;
-  
+  /* background: #df2878; */
+  background: var(--brand-gradient);
   color: #ffffff;
 
   font-size: 14px;
