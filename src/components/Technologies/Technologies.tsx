@@ -86,7 +86,7 @@ const Technologies = () => {
   // Loading State
   if (loading) {
     return (
-      <section className="technologies-section loading-section">
+      <section  className="technologies-section loading-section">
         <div className="loading-container">
           <div className="loading-spinner"></div>
 
@@ -97,7 +97,7 @@ const Technologies = () => {
   }
 
   return (
-    <section className="technologies-section">
+    <section  id="technologies"  className="technologies-section">
 
       <div className="technologies-heading">
         <h2>
