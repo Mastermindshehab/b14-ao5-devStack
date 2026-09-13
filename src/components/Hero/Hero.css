@@ -66,12 +66,7 @@
 
   margin-top: 4px;
 
-  /* background: linear-gradient(
-    90deg,
-    #ff4b35,
-    #e52b8a,
-    #c83fe8
-  ); */
+
 
 
   background: var(--brand-gradient);
@@ -126,11 +121,7 @@
 
   border-radius: 8px;
 
-  /* background: linear-gradient(
-    90deg,
-    #ff542f,
-    #ec3287
-  ); */
+
 
   /* added brand color */
   background: var(--brand-gradient);
